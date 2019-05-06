@@ -1,0 +1,9 @@
+<p>
+  profile works!
+</p>
+<p>
+  If you can see this page, you are logged in!
+</p>
+<li> <a class ="nav-link" (click)="authService.logout()" href="#">Logout</a></li>
+
+<li><a routerLink="../home" class="current"  *ngIf="authService.check">create news</a></li>

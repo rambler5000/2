@@ -1,0 +1,30 @@
+<p>
+  home works!sdfff
+</p>
+<div class="form-group">
+  <label>Название статьи</label>
+  <input class="form-control" name="new_newsname" [(ngModel)]="new_news.news_headline" />
+</div>
+<div class="form-group">
+  <label>Содержание</label>
+  <textarea  cols="40" rows="3" name="text"  [(ngModel)]="new_news.news_text"></textarea>
+  
+</div>
+<div class="form-group">
+  <label>Выбирете категорию</label>
+  <!--<input class="form-control" name="category" [(ngModel)]="new_news.category" /><form action="select1.php" name="category" [(ngModel)]="new_news.category">-->
+
+
+  <p><select name="category" [(ngModel)]="new_news.category">
+    <option  *ngFor="let item of arr; let i = index">{{arr[i]}}</option>
+
+   </select></p>
+
+</div>
+<div class="form-group">
+  <button class="btn btn-default" (click)="submit(new_news)">Создать новость</button>
+</div>
+
+
+
+<router-outlet></router-outlet>

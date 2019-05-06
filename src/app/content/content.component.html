@@ -1,0 +1,33 @@
+
+<p>
+  content works!
+  \kljldg
+  
+  
+  ok
+{{r}}
+</p><br />bdf
+
+
+<p>{{a}}</p>
+<p>{{b}}</p>
+11"  {{c}} "11
+
+<p>{{arr}}</p>
+<!--<p *ngFor="let item of arr; let i = index">
+  <a href="http://localhost:3000/test?id={{i}}&category={{category}}">{{arr[i]}}</a>
+</p>-->
+
+
+<p *ngFor="let item of arr; let i = index">
+  <a [routerLink]="['../../test',i,category]">{{arr[i]}}</a>
+</p>
+
+<!--<ul class="menu-main">
+  <li><a routerLink="/home" class="current">Home</a></li>
+  <li *ngFor="let item of arr; let i = index"><a [routerLink]="['content',arr[i]]">{{arr[i]}}</a></li>
+  <li><a routerLink="/silki">silki</a></li>
+  <li><a routerLink="/test">test</a></li>
+</ul>-->
+
+<router-outlet></router-outlet>

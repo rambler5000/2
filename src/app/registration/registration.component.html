@@ -1,0 +1,52 @@
+<p>
+  registration works!
+</p>
+<p>
+    login works!
+  </p>
+  <h3>registration</h3>
+  <div>
+      <div class="spacer">
+          <label for="Email">Email</label>
+          <input type="text" placeholder="email" name="email" [(ngModel)]="new_user.email">
+          <div *ngIf="!t">wrong email</div>
+        </div>
+    <div class="spacer">
+      <label for="login">login</label>
+      <input type="text" placeholder="login" name="login" [(ngModel)]="new_user.user">
+      <div *ngIf="!t1">login already in use</div>
+    </div>
+    <div class="spacer">
+      <label for="password">Password</label>
+      <input type="password" placeholder="password" name="password" [(ngModel)]="new_user.password" />
+    </div>
+    <div class="spacer">
+      <button  type="submit" (click)="submit(new_user)">registration</button>
+    </div>
+  </div>
+
+  <!--
+
+  <div class="form-group">
+      <label>Название статьи</label>
+      <input class="form-control" name="new_newsname" [(ngModel)]="new_news.news_headline" />
+    </div>
+    <div class="form-group">
+      <label>Содержание</label>
+      <textarea  cols="40" rows="3" name="text"  [(ngModel)]="new_news.news_text"></textarea>
+      
+    </div>
+    <div class="form-group">
+      <label>Выбирете категорию</label>
+      <input class="form-control" name="category" [(ngModel)]="new_news.category" /><form action="select1.php" name="category" [(ngModel)]="new_news.category">
+    
+    
+      <p><select name="category" [(ngModel)]="new_news.category">
+        <option  *ngFor="let item of arr; let i = index">{{arr[i]}}</option>
+    
+       </select></p>
+    
+    </div>
+    <div class="form-group">
+      <button class="btn btn-default" (click)="submit(new_news)">Отправить</button>
+    </div>-->
